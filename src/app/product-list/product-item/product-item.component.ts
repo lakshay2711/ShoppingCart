@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+
 import { Product } from '../product-list.service';
+import { HeaderService } from 'src/app/header/header.service';
 
 @Component({
   selector: 'product-item',
@@ -11,13 +13,13 @@ export class ProductItemComponent implements OnInit {
   @Input() product: Product;
   @Input() index: number;
 
-  constructor() { }
+  constructor(private headerService: HeaderService) { }
 
   ngOnInit() {
   }
 
-  addProductToCart(product) {
-    console.log(product)
+  addProductToShoppingCart(product: Product) {
+    this.headerService.setCartData(product);
   }
 
 }

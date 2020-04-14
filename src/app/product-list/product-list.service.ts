@@ -66,6 +66,7 @@ export class ProductListService {
 }
 
 export interface Product {
+    quantity?: any[];
     productID: number;
     productName: string;
     productPrice: number;

@@ -8,6 +8,8 @@ import { AppRoutingModule } from './app.routing.module';
 import { ProductListModule } from './product-list/product-list.module';
 import { ShoppingCartModule } from './shopping-cart/shopping-cart.module';
 import { FilterComponent } from './filter/filter.component';
+import { SharedService } from './shared/shared.service';
+import { HeaderService } from './header/header.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,7 @@ import { FilterComponent } from './filter/filter.component';
     ProductListModule,
     ShoppingCartModule
   ],
-  providers: [],
+  providers: [SharedService,HeaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

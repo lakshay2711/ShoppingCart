@@ -1,1 +1,49 @@
-<p>shopping-cart works!</p>
+<div class="container">
+    <h3>My Shopping Bag</h3>
+
+    <div class="alert alert-success" role="alert" *ngIf="showStatus">
+        Your order has been placed successfully!
+    </div>
+
+    <div id="shopping-cart">
+        <div id="bag">
+            <ul *ngFor="let p of products; let i=index">
+                <div>
+                    <li><img src="{{p.imageUrl}}" alt="{{p.imageUrl}}"></li>
+                </div>
+                <div>
+                    <li class="primary-text">{{p.productName}}</li>
+                    <li class="secondary-text">{{p.productDescription}}</li>
+                    <li>
+                        <label for="productQuantity">Qty:</label>
+                        <select id="productQuantity" >
+                            <option *ngFor="let qty of p.quantity" value="{{qty}}">{{qty}}</option>
+                        </select>
+                    </li>
+                </div>
+                <div>
+                    <li>{{p.productPrice}}</li>
+                    <div>
+                        <li><s>{{p.productActualPriceFormatted}}</s></li>
+                        <li>{{p.percentageDiscount}}</li>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div id="amount">
+            <h6>PRICE DETAILS</h6>
+            <ul>
+                <li>
+                    <div>Order Total</div>
+                    <div>{{totalPrice}}</div>
+                </li>
+                <hr>
+                <li>
+                    <div>Total</div>
+                    <div>{{totalPrice}}</div>
+                </li>
+                <li><button (click)="placeOrder()">PLACE ORDER</button></li>
+            </ul>
+        </div>
+    </div>
+</div>

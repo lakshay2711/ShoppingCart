@@ -3,6 +3,8 @@
         <h2>Welcome to my Shopping Cart</h2>
     </div>
     <div>
-        <img src="assets/shopping-cart-solid.svg" alt="Shopping Cart" class="cart">
+        <img src="assets/shopping-cart-solid.svg" alt="Shopping Cart" class="cart"
+         (click)="navigateToShoppingCart()">
+        <span class="badge badge-pill badge-warning">{{itemsSize}}</span>
     </div>
 </div>

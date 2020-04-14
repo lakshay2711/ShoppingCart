@@ -19,7 +19,6 @@ import { SharedService } from '../shared/shared.service';
     CommonModule,
   ],
   providers: [
-    SharedService
   ],
 })
 export class ProductListModule { }
