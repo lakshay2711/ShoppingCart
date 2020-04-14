@@ -1,0 +1,11 @@
+<li class="product-base">
+    <div><img src="{{product.imageUrl}}" alt="{{product.imageUrl}}"></div>
+    <div><h5>{{product.productName}}</h5></div>
+    <div>{{product.productDescription}}</div>
+    <div class="inner-flex">
+        <div>{{product.productPriceFormatted}}</div>
+        <div><s>{{product.productActualPriceFormatted}}</s></div>
+        <div>{{product.percentageDiscount}}</div>
+    </div>
+    <button type="submit" (click)="addProductToCart(product)">Add to Cart</button>
+</li>

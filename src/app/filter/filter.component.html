@@ -1,0 +1,20 @@
+<div>
+    <h5>Filter :</h5>
+    <form [formGroup]="filterGroup" (ngSubmit)="onFilterSubmit()">
+        
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" formControlName="name"><br>
+        <input type="checkbox" id="men" name="male" formControlName="male" value="men">&nbsp;
+        <label for="men">Men</label><br>
+        <input type="checkbox" id="female" name="female" formControlName="female" value="female">&nbsp;
+        <label for="female">Female</label><br>
+        
+        <h5>Sort :</h5>
+        <input type="radio" id="asc" name="sort" value="asc" formControlName="sort">&nbsp;
+        <label for="asc">Ascending</label><br>
+        <input type="radio" id="dsc" name="sort" value="dsc" formControlName="sort">&nbsp;
+        <label for="dsc">Descending</label><br>
+
+        <button type="submit">Apply</button>
+    </form>
+</div>

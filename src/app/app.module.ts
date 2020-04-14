@@ -1,14 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { AppRoutingModule } from './app.routing.module';
+import { ProductListModule } from './product-list/product-list.module';
+import { ShoppingCartModule } from './shopping-cart/shopping-cart.module';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FilterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    ProductListModule,
+    ShoppingCartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

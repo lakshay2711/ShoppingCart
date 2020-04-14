@@ -1,0 +1,12 @@
+main {
+    display: flex;
+}
+main div:first-of-type {
+    flex: 2;
+    border: 1px solid #ccc;
+    height: 50vh;
+    margin: 20px auto;
+}
+main div:last-of-type {
+    flex: 10;
+}
